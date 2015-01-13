@@ -15,7 +15,7 @@
         <item>Buddha</item>
         <item>Kalki</item>
     </string-array>
-    <string-array name="short-descriptions">
+    <string-array name="short_descriptions">
         <item>Matsya, the fish, from the Satya Yuga.</item>
         <item>Kurma, the tortoise, from the Satya Yuga.</item>
         <item>Varaha, the boar, from the Satya Yuga. </item>
