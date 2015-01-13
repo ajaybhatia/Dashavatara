@@ -15,4 +15,16 @@ public class ViewHolder {
         titleTextView = (TextView) view.findViewById(R.id.nameTextView);
         descriptionTextView = (TextView) view.findViewById(R.id.descriptionTextView);
     }
+
+    public ImageView getImageView() {
+        return imageView;
+    }
+
+    public TextView getTitleTextView() {
+        return titleTextView;
+    }
+
+    public TextView getDescriptionTextView() {
+        return descriptionTextView;
+    }
 }
