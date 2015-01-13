@@ -3,5 +3,16 @@
 
     <string name="app_name">Dashavatara</string>
     <string name="action_settings">Settings</string>
-
+    <string-array name="titles">
+        <item>Matsya</item>
+        <item>Kurma</item>
+        <item>Varaha</item>
+        <item>Narasimha</item>
+        <item>Vamana</item>
+        <item>Parashurama</item>
+        <item>Rama</item>
+        <item>Krishna</item>
+        <item>Buddha</item>
+        <item>Kalki</item>
+    </string-array>
 </resources>
