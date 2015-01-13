@@ -4,12 +4,14 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.ajaybhatia.dashavatara.helpers.MyAdapter;
+
 
 public class MainActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreat   e(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ListView listView = getListView();

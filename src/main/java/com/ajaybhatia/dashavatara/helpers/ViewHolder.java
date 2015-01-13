@@ -1,8 +1,10 @@
-package com.ajaybhatia.dashavatara;
+package com.ajaybhatia.dashavatara.helpers;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ajaybhatia.dashavatara.R;
 
 public class ViewHolder {
 

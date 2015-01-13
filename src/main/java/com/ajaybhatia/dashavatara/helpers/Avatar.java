@@ -1,4 +1,4 @@
-package com.ajaybhatia.dashavatara;
+package com.ajaybhatia.dashavatara.helpers;
 
 public class Avatar {
     private int image;
