@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.ajaybhatia.dashavatara.R;
@@ -31,7 +32,9 @@ import com.ajaybhatia.dashavatara.helpers.MyAdapter;
 /**
  * Created by ajay on 18/1/15.
  */
-public class ListFragment extends Fragment {
+public class ListFragment extends Fragment implements AdapterView.OnItemClickListener {
+    private Communicator communicator;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_list, container, false);
@@ -40,9 +43,23 @@ public class ListFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         ListView listView = (ListView) getActivity().findViewById(R.id.listView);
         MyAdapter adapter = new MyAdapter(getActivity());
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        communicator.response(position);
+    }
+
+    public void setCommunicator(Communicator communicator) {
+        this.communicator = communicator;
+    }
+
+    public interface Communicator {
+        public void response(int position);
     }
 }

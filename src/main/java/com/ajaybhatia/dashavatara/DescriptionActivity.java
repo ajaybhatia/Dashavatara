@@ -23,28 +23,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-import com.ajaybhatia.dashavatara.fragments.ListFragment;
+import com.ajaybhatia.dashavatara.fragments.DescriptionFragment;
 
+/**
+ * Created by ajay on 18/1/15.
+ */
+public class DescriptionActivity extends ActionBarActivity {
 
-public class MainActivity extends ActionBarActivity implements ListFragment.Communicator {
-
-    private ListFragment listFragment;
+    private DescriptionFragment descriptionFragment;
     private FragmentManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_desc);
+
+        Intent intent = getIntent();
 
         manager = getFragmentManager();
-        listFragment = (ListFragment) manager.findFragmentById(R.id.listfragment);
-        listFragment.setCommunicator(this);
-    }
-
-    @Override
-    public void response(int position) {
-        Intent intent = new Intent(this, DescriptionActivity.class);
-        intent.putExtra("position", position);
-        startActivity(intent);
+        descriptionFragment = (DescriptionFragment) manager.findFragmentById(R.id.descfragment);
+        descriptionFragment.setPosition(intent.getIntExtra("position", 0));
     }
 }
