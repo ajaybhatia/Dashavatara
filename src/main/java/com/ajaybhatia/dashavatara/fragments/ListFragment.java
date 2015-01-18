@@ -16,7 +16,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-package com.ajaybhatia.dashavatara;
+package com.ajaybhatia.dashavatara.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.ajaybhatia.dashavatara.R;
 import com.ajaybhatia.dashavatara.helpers.MyAdapter;
 
 /**
