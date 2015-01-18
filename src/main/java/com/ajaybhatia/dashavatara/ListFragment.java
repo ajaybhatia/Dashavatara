@@ -18,16 +18,30 @@
 
 package com.ajaybhatia.dashavatara;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
+import com.ajaybhatia.dashavatara.helpers.MyAdapter;
 
-public class MainActivity extends ActionBarActivity {
-
+/**
+ * Created by ajay on 18/1/15.
+ */
+public class ListFragment extends Fragment {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_list, container, false);
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        ListView listView = (ListView) getActivity().findViewById(R.id.listView);
+        MyAdapter adapter = new MyAdapter(getActivity());
+        listView.setAdapter(adapter);
+    }
 }
